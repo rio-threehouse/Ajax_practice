@@ -1,0 +1,7 @@
+<h1>Ajaxの練習</h1>
+
+<%# form_for: 任意のmodelに基づいたformを作るときに使う %>
+<%= form_tag(url_for(:action => 'index'), :remote => true) do %>
+  <%= text_field_tag :title %>
+  <%= submit_tag 'タイトルを変更する' %>
+<% end %>
