@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get 'practice/index'
-  post 'practice/index'
+  root to: 'practice#index'
+  post '/', to: 'practice#index'
+  # /から来たpostのルーティング practiceのindexコントローラへ行く
 end

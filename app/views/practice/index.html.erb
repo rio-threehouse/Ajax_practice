@@ -2,6 +2,8 @@
 
 <%# form_for: 任意のmodelに基づいたformを作るときに使う %>
 <%= form_tag(url_for(:action => 'index'), :remote => true) do %>
+<%# 送信先はindexアクションで、js形式で送る %>
   <%= text_field_tag :title %>
   <%= submit_tag 'タイトルを変更する' %>
+  <%# submitでpostリクエストを送信 routesで/からの post時のルーティングを指定する %>
 <% end %>
